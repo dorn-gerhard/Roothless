@@ -18,4 +18,4 @@ Tiles:
 - Workadventure: https://github.com/thecodingmachine/workadventure-map-starter-kit
 - https://0x72.itch.io/
 - https://seliel-the-shaper.itch.io/character-base
-- Food: https://henrysoftware.itch.io/
+- Food: https://assetstore.unity.com/packages/2d/environments/free-pixel-food-113523, https://henrysoftware.itch.io/
