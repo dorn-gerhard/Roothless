@@ -6,36 +6,50 @@ using UnityEngine;
 public static class ClueBoxFormatter
 {
     // in pixels
-    private static int averageCharacterWidth = 6;
+    private static int averageCharacterWidth = 8;
     private static int averageCharacterHeight = 8;
-    private static int lineWidth = 140;
+    private static int maxCharactersInLine = 30;
 
     public static TextWithDimensions Adjust(string text)
     {
-        int width = 220;
+        //int width = 220;
         int height = 0;
         string formattedText = "";
 
-        int currentLineWidth = 0;
+        int currentCharactersInLine = 0;
+        int lineWidth;
 
         string[] delimiters = new string[] { " " };
-
         string[] words = text.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
 
         for(int i = 0; i < words.Length; i++)
         {
-            formattedText += words[i] + " ";
-            currentLineWidth += 1 + words[i].Length * averageCharacterWidth;
-            if (currentLineWidth > lineWidth)
+            if (currentCharactersInLine > maxCharactersInLine)
             {
                 formattedText += "\n\n";
                 height += 2;
-                currentLineWidth = 0;
+                currentCharactersInLine = 0;
             }
+            formattedText += words[i] + " ";
+            currentCharactersInLine += 1 + words[i].Length;
         }
-            height -= 2;
-            if (height <= 0)
-                height = 2;
-        return new TextWithDimensions(width, height * averageCharacterHeight, formattedText);
+
+        if (height <= 1)
+        {
+            lineWidth = Mathf.Min(formattedText.Length - 2, maxCharactersInLine - 3);
+            if (lineWidth <= 0)
+                lineWidth = 3;
+            height = 2;
+        }
+        else
+        {
+            lineWidth = maxCharactersInLine - 3;
+            height++;
+        }
+        
+        return new TextWithDimensions(
+            lineWidth * averageCharacterWidth,
+            height * averageCharacterHeight,
+            formattedText);
     }
 }

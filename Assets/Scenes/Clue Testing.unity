@@ -1270,11 +1270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &150867843 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 4403461219918477937, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
-  m_PrefabInstance: {fileID: 4403461220054398450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &162795857
 GameObject:
   m_ObjectHideFlags: 0
@@ -7284,26 +7279,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4403461219918477936, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 205.68916
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403461219918477936, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 205.68916
-      objectReference: {fileID: 0}
     - target: {fileID: 4403461220645303576, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
       propertyPath: clueText
       value: 
       objectReference: {fileID: 11400000, guid: 6c5d571fcb01ef64e8d79e9f940a7c53, type: 2}
     - target: {fileID: 4403461220645303576, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
-      propertyPath: background
-      value: 
-      objectReference: {fileID: 150867843}
-    - target: {fileID: 4403461220645303576, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
       propertyPath: textContent
       value: 
       objectReference: {fileID: 1080003518}
+    - target: {fileID: 4403461220645303576, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
+      propertyPath: unformattedText
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c5d571fcb01ef64e8d79e9f940a7c53, type: 2}
     - target: {fileID: 4403461220645303578, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
       propertyPath: m_Name
       value: Clue
@@ -7352,17 +7339,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4403461220922329942, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403461221132762700, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403461221346021444, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f1d75645650b474db16b21c2638775a, type: 3}

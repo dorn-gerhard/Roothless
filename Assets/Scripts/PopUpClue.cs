@@ -5,10 +5,10 @@ using TMPro;
 [RequireComponent(typeof(Collider2D))]
 public class PopUpClue : MonoBehaviour
 {
-    [SerializeField] ClueText clueText;
+    [SerializeField] ClueText unformattedText;
     [SerializeField] private GameObject UI_parent;
     [SerializeField] private SpriteRenderer background;
-    [SerializeField] private TextMeshProUGUI textContent;
+    [SerializeField] private TextMeshProUGUI textField;
     private Collider2D triggerArea;
 
     private void Start()
@@ -28,11 +28,13 @@ public class PopUpClue : MonoBehaviour
 
     private void AdjustSize()
     {
-        TextWithDimensions textFormat = ClueBoxFormatter.Adjust(clueText.GetText());
+        TextWithDimensions textFormat = ClueBoxFormatter.Adjust(unformattedText.GetText());
         Debug.Log(textFormat);
+
         background.size = new Vector2(textFormat.width / 100f, textFormat.height / 100f);
-        textContent.text = textFormat.formattedText;
-        textContent.GetComponent<RectTransform>().sizeDelta = new Vector2(2 * textFormat.width, textFormat.height);
+        
+        textField.text = textFormat.formattedText;
+        textField.GetComponent<RectTransform>().sizeDelta = new Vector2(2 * textFormat.width, textFormat.height);
     }
 
 

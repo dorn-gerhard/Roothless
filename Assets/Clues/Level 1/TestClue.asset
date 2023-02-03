@@ -12,7 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: TestClue
   m_EditorClassIdentifier: 
-  clueText: This is a clue for testing. It is a bit bigger for testing. Will it work?
-    This is a clue for testing. It is a bit bigger for testing. Will it work? This
-    is a clue for testing. It is a bit bigger for testing. Will it work? This is
-    a clue for testing. It is a bit bigger for testing. Will it work?
+  clueText: Clue.
