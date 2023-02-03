@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestMenuNPCEntry : MonoBehaviour
 {
@@ -10,42 +12,61 @@ public class QuestMenuNPCEntry : MonoBehaviour
     private string _characterName;
     private Sprite _characterMenuIcon;
     [SerializeField]
-    private GameObject accuseButton;
+    private GameObject acuseButton;
     [SerializeField]
     private QuestMenu _questMenu;
-    
-    
-    
-    
-    // Start is called before the first frame update
-    void Start()
+    public void SetQuestMenu(QuestMenu newQuestMenu)
     {
-        
+        _questMenu = newQuestMenu;
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    private void Start()
     {
-        
+        _questMenu.onAcusePerson += EnableAccusation;
+        _questMenu.onStopAcusing += DisableAccusation;
     }
+
 
     public void EnableAccusation()
     {
-        accuseButton.SetActive(true);
+        acuseButton.SetActive(true);
     }
 
     public void DisableAccusation()
     {
-        accuseButton.SetActive(false);
+        acuseButton.SetActive(false);
     }
     private void OnEnable()
     {
-        _questMenu.onAcusePerson += EnableAccusation;
-        _questMenu.onStopAcusing += DisableAccusation;
+        if (_questMenu != null)
+        {
+            _questMenu.onAcusePerson += EnableAccusation;
+            _questMenu.onStopAcusing += DisableAccusation;
+        }
+       
     }
     private void OnDisable()
     {
         _questMenu.onAcusePerson -= EnableAccusation;
         _questMenu.onStopAcusing -= DisableAccusation;
+    }
+
+    public void Acuse()
+    {
+        FindObjectOfType<LogicManager>().SubmitAcusation(_characterID);
+    }
+
+    public void SetData(NPCQuestMenuData newData)
+    {
+        _characterID = newData.NPCID;
+        _characterMenuIcon = newData.NPCIcon;
+        if(_characterMenuIcon != null)
+        {
+            GetComponentInChildren<Image>().sprite = _characterMenuIcon;
+        }
+        _characterName = newData.NPCName;
+        GetComponentInChildren<TextMeshProUGUI>().text = _characterName;
     }
 }

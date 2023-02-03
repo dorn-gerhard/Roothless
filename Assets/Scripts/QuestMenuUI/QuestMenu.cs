@@ -22,11 +22,25 @@ public class QuestMenu : MonoBehaviour
     [SerializeField]
     private string _stopAcuseText;
 
+
+    [SerializeField]
+    GameObject NPCMenuEntryPrefab;
+    [SerializeField]
+    private int initialSpawnLocation;
+    [SerializeField]
+    private int spawnLocationIncrement;
+    private int currentNPCEntryCount = 0;
+    [SerializeField]
+    private int offsetToRight=105;
+
     void Start()
     {
         
         onAcusePerson += SwitchAcusationButton;
         onStopAcusing += SwitchAcusationButton;
+
+        CreateNewNPCEntry(0);
+        CreateNewNPCEntry(1);
 
     }
 
@@ -48,4 +62,18 @@ public class QuestMenu : MonoBehaviour
         acuseButton.GetComponentInChildren<TextMeshProUGUI>().text = textUpdate;
     }
 
+    private void CreateNewNPCEntry(int NPCID)
+    {
+        QuestMenuNPCEntry newEntry = Instantiate(NPCMenuEntryPrefab, new Vector3(offsetToRight, initialSpawnLocation - (spawnLocationIncrement*currentNPCEntryCount)), Quaternion.identity, transform).GetComponent<QuestMenuNPCEntry>();
+        SetUpNewEntry(newEntry, NPCID);
+        currentNPCEntryCount++;
+
+    }
+    private void SetUpNewEntry(QuestMenuNPCEntry newEntry, int NPCID)
+    {
+        NPCQuestMenuData menuData = FindObjectOfType<LogicManager>().allNPCData.GetAllNPCData()[NPCID];
+        newEntry.SetData(menuData);
+        newEntry.SetQuestMenu(this);
+
+    }
 }

@@ -6949,6 +6949,52 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3383959612706694217, guid: 7a13c3b7af08fec48b107e1d7ac17b2e, type: 3}
   m_PrefabInstance: {fileID: 1415890935759097856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1658415562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1658415564}
+  - component: {fileID: 1658415563}
+  m_Layer: 0
+  m_Name: LogicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1658415563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658415562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538e9f76f3a13a54c9a4264197591a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _correctChoiceNPCID: 1
+  allNPCData: {fileID: 11400000, guid: c8022167ff4320b4aa15cac3a177b3a0, type: 2}
+--- !u!4 &1658415564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658415562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 105.890015, y: 133.86877, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672027585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2035362388744281686, guid: 5d59e448755de4241a2eacd3f2ed684a, type: 3}
@@ -7647,6 +7693,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8377679857667682223, guid: 101544f10fed64846b689e94842c7257, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377679859226946406, guid: 101544f10fed64846b689e94842c7257, type: 3}
+      propertyPath: offsetToRight
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377679859226946406, guid: 101544f10fed64846b689e94842c7257, type: 3}
+      propertyPath: initialSpawnLocation
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377679859226946406, guid: 101544f10fed64846b689e94842c7257, type: 3}
+      propertyPath: spawnLocationIncrement
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8377679859283814870, guid: 101544f10fed64846b689e94842c7257, type: 3}
       propertyPath: m_Name
       value: QuestUICanvas
