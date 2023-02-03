@@ -5,6 +5,8 @@
 - Dominik Baumann
 [Miro Board](https://miro.com/app/board/uXjVPrcy-60=/?share_link_id=560165212361)
 
+Based on: https://www.youtube.com/watch?v=7iYWpzL9GkM
+Artwork from: https://game-endeavor.itch.io/mystic-woods
 
 Assets: 
 Characters:
