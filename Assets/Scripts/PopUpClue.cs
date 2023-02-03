@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
 public class PopUpClue : MonoBehaviour
@@ -9,6 +10,8 @@ public class PopUpClue : MonoBehaviour
     [SerializeField] private GameObject UI_parent;
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private TextMeshProUGUI textField;
+    [SerializeField] private Button closeButton;
+
     private Collider2D triggerArea;
 
     private void Start()
@@ -35,6 +38,11 @@ public class PopUpClue : MonoBehaviour
         
         textField.text = textFormat.formattedText;
         textField.GetComponent<RectTransform>().sizeDelta = new Vector2(2 * textFormat.width, textFormat.height);
+
+        Vector3 temp = closeButton.transform.position;
+        temp.x = 0.5f * background.size.x - 0.18f;
+        temp.y = -0.5f * background.size.y - 0.08f;
+        closeButton.transform.localPosition = temp;
     }
 
 

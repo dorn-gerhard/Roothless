@@ -194,6 +194,7 @@ MonoBehaviour:
   UI_parent: {fileID: 4403461219802758223}
   background: {fileID: 4403461219918477937}
   textField: {fileID: 4403461221132762700}
+  closeButton: {fileID: 4403461220922329940}
 --- !u!1 &4403461220922329942
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4403461220922329943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ RectTransform:
   m_GameObject: {fileID: 4403461220922329942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.004861705, y: 0.004861705, z: 0.004861705}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4403461221162847316}
