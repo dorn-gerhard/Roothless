@@ -3,7 +3,7 @@ guid: aae70440e6d4b7d41813bd8414165b11
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -94,6 +95,18 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1907,6 +1920,7 @@ TextureImporter:
       tileset_gihan_66: -1804885299
       tileset_gihan_9: -1164005764
       tileset_gihan_14: -1741823105
+      tileset_gihan_75: 288421515
       tileset_gihan_40: -312175229
       tileset_gihan_50: 1353255077
       tileset_gihan_24: -1186724657
@@ -1917,11 +1931,10 @@ TextureImporter:
       tileset_gihan_22: 1883874686
       tileset_gihan_0: 1456710527
       tileset_gihan_15: 586269818
-      tileset_gihan_8: -1834528454
-      tileset_gihan_75: 288421515
-      tileset_gihan_55: 1666458158
       tileset_gihan_10: 33928016
       tileset_gihan_81: 2054065984
+      tileset_gihan_55: 1666458158
+      tileset_gihan_8: -1834528454
       tileset_gihan_6: -1356517148
       tileset_gihan_26: 1565387219
       tileset_gihan_57: -1989956503

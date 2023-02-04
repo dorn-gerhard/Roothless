@@ -20,18 +20,22 @@ public class QuestMenu : MonoBehaviour
     [SerializeField]
     private string _acuseText;
     [SerializeField]
+    private Sprite _acuseSprite;
+    [SerializeField]
     private string _stopAcuseText;
+    [SerializeField]
+    private Sprite _stopSprite;
 
 
     [SerializeField]
     GameObject NPCMenuEntryPrefab;
     [SerializeField]
-    private int initialSpawnLocation;
+    private float initialSpawnLocation;
     [SerializeField]
-    private int spawnLocationIncrement;
+    private float spawnLocationIncrement;
     private int currentNPCEntryCount = 0;
     [SerializeField]
-    private int offsetToRight=105;
+    private float offsetToRight=105;
 
     void Start()
     {
@@ -60,6 +64,8 @@ public class QuestMenu : MonoBehaviour
     {
         string textUpdate = _isAcusing ?  _acuseText : _stopAcuseText;
         acuseButton.GetComponentInChildren<TextMeshProUGUI>().text = textUpdate;
+        Sprite spriteUpdate = _isAcusing ? _acuseSprite : _stopSprite;
+        acuseButton.GetComponentInChildren<Image>().sprite = spriteUpdate;
     }
 
     private void CreateNewNPCEntry(int NPCID)
