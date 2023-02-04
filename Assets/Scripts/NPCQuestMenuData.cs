@@ -10,4 +10,7 @@ public class NPCQuestMenuData : ScriptableObject
     public string NPCName;
     public int NPCID;
     public Sprite NPCIcon;
+
+    public string[] NPCDialogueLines;
+
 }
