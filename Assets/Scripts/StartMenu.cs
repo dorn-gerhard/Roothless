@@ -1,12 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
     [SerializeField] Canvas startMenu;
     [SerializeField] Canvas settingsMenu;
     [SerializeField] Canvas levelSelectMenu;
+
+    [SerializeField] Button musicButton;
+    [SerializeField] Button soundButton;
+
+    private TextMeshProUGUI musicText;
+    private TextMeshProUGUI soundText;
+
+    private void Awake()
+    {
+        musicText = musicButton.GetComponentInChildren<TextMeshProUGUI>();
+        soundText = soundButton.GetComponentInChildren<TextMeshProUGUI>();
+
+    }
+
+    private void OnEnable()
+    {
+        SettingsManager.SoundSettingChanged += UpdateSoundText;
+        SettingsManager.MusicSettingChanged += UpdateMusicText;
+    }
+
+    private void OnDisable()
+    {
+        SettingsManager.SoundSettingChanged -= UpdateSoundText;
+        SettingsManager.MusicSettingChanged -= UpdateMusicText;
+    }
+
+    private void UpdateMusicText()
+    {
+        musicText.text = SettingsManager.Instance.GetMusicText();
+    }
+
+    private void UpdateSoundText()
+    {
+        soundText.text = SettingsManager.Instance.GetSoundText();
+    }
 
     public void StartGame() 
     {
@@ -17,7 +55,6 @@ public class StartMenu : MonoBehaviour
     {
         startMenu.enabled = false;
         settingsMenu.enabled = true;
-        Debug.Log(settingsMenu.isActiveAndEnabled);
     }
 
     public void QuitGame()
@@ -44,6 +81,7 @@ public class StartMenu : MonoBehaviour
         // open scene selection
         startMenu.enabled = false;
         levelSelectMenu.enabled = true;
+        SceneManager.LoadScene("Nick's Scene");
     }
 
 

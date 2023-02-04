@@ -12,11 +12,9 @@ public class SettingsManager : MonoBehaviour
     public bool SoundIsOn { get; private set; }
     public bool MusicIsOn { get; private set; }
 
-    [SerializeField] Button musicButton;
-    [SerializeField] Button soundButton;
-
-    private TextMeshProUGUI musicText;
-    private TextMeshProUGUI soundText; 
+    public delegate void SettingChanged();
+    public static SettingChanged SoundSettingChanged;
+    public static SettingChanged MusicSettingChanged;
 
 
     private void Awake()
@@ -29,44 +27,41 @@ public class SettingsManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
 
-        musicText = musicButton.GetComponentInChildren<TextMeshProUGUI>();
-        soundText = soundButton.GetComponentInChildren<TextMeshProUGUI>();
-
         SoundIsOn = true;
         MusicIsOn = true;
 
-        UpdateMusicText();
-        UpdateSoundText();
+        SoundSettingChanged?.Invoke();
+        MusicSettingChanged?.Invoke();
     }
 
-    private void UpdateSoundText()
+    public string GetSoundText()
     {
         if (SoundIsOn)
-            soundText.text = "Sound: On";
+            return "Sound: On";
         else
-            soundText.text = "Sound: Off";
+            return "Sound: Off";
     }
 
 
-    private void UpdateMusicText()
+    public string GetMusicText()
     {
         if (MusicIsOn)
-            musicText.text = "Music: On";
+            return "Music: On";
         else
-            musicText.text = "Music: Off";
+            return "Music: Off";
     }
 
 
     public void ToggleSound()
     {
         SoundIsOn = !SoundIsOn;
-        UpdateSoundText();
+        SoundSettingChanged?.Invoke();
     }
 
     public void ToggleMusic()
     {
         MusicIsOn = !MusicIsOn;
-        UpdateMusicText();
+        MusicSettingChanged?.Invoke();
     }
-    
+
 }
