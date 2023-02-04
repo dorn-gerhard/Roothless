@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -59,7 +60,6 @@ public class PauseMenu : MonoBehaviour
 
     private void TogglePauseMenu()
     {
-        Debug.Log("Pause menu is " + pauseMenuIsActive);
         if (pauseMenuIsActive)
             ClosePauseMenu();
         else
@@ -88,6 +88,13 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToStartMenu()
     {
+        StartCoroutine(GoToStartMenuCR());
+    }
+
+    private IEnumerator GoToStartMenuCR()
+    {
+        ClosePauseMenu();
+        yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
         SceneManager.LoadScene("Start Menu");
     }
 
@@ -105,6 +112,13 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        StartCoroutine(QuitGameCR());
+    }
 
+    private IEnumerator QuitGameCR()
+    {
+        ClosePauseMenu();
+        yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
+        Application.Quit();
     }
 }

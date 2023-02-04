@@ -22,6 +22,11 @@ public class StartMenu : MonoBehaviour
         musicText = musicButton.GetComponentInChildren<TextMeshProUGUI>();
         soundText = soundButton.GetComponentInChildren<TextMeshProUGUI>();
 
+        soundButton.onClick.RemoveAllListeners();
+        soundButton.onClick.AddListener(() => { SettingsManager.Instance.ToggleSound(); });
+
+        musicButton.onClick.RemoveAllListeners();
+        musicButton.onClick.AddListener(() => { SettingsManager.Instance.ToggleMusic(); });
     }
 
     private void OnEnable()
@@ -77,7 +82,7 @@ public class StartMenu : MonoBehaviour
 
     private IEnumerator StartGameCR()
     {
-        yield return null;
+        yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
         // open scene selection
         startMenu.enabled = false;
         levelSelectMenu.enabled = true;
@@ -87,7 +92,7 @@ public class StartMenu : MonoBehaviour
 
     private IEnumerator QuitGameCR()
     {
-        yield return null;
+        yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
         Application.Quit();
     }
 }
