@@ -6821,7 +6821,7 @@ Transform:
   m_Children:
   - {fileID: 83584047}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1942557150
 MonoBehaviour:
@@ -7015,7 +7015,7 @@ Transform:
   - {fileID: 1358590416}
   - {fileID: 1351307697}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143974348 stripped
 GameObject:
@@ -7204,7 +7204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4887537433899281199, guid: 7a13c3b7af08fec48b107e1d7ac17b2e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4887537433899281199, guid: 7a13c3b7af08fec48b107e1d7ac17b2e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7291,6 +7291,10 @@ PrefabInstance:
       propertyPath: unformattedText
       value: 
       objectReference: {fileID: 11400000, guid: 6c5d571fcb01ef64e8d79e9f940a7c53, type: 2}
+    - target: {fileID: 4403461220645303577, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4403461220645303578, guid: 1f1d75645650b474db16b21c2638775a, type: 3}
       propertyPath: m_Name
       value: Clue

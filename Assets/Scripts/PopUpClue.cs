@@ -11,8 +11,8 @@ public class PopUpClue : MonoBehaviour
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private TextMeshProUGUI textField;
     [SerializeField] private Button closeButton;
-
-    private Collider2D triggerArea;
+    [SerializeField] private Collider2D triggerArea;
+    [SerializeField] private GameObject clueIndicator;
 
     private void Start()
     {
@@ -22,7 +22,6 @@ public class PopUpClue : MonoBehaviour
 
     private void SetUpTrigger()
     {
-        triggerArea = GetComponent<Collider2D>();
         if(triggerArea == null)
             Debug.LogError("No Collider for pup-up-clue on " + gameObject.name);
         else
@@ -49,11 +48,13 @@ public class PopUpClue : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         DisplayMessage();
+        HideClueIndicator();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         HideMessage();
+        ShowClueIndicator();
     }
 
     private void HideMessage() 
@@ -68,4 +69,7 @@ public class PopUpClue : MonoBehaviour
 
     // For "close" button
     public void Close() => HideMessage();
+
+    private void HideClueIndicator() => clueIndicator.gameObject.SetActive(false);
+    private void ShowClueIndicator() => clueIndicator.gameObject.SetActive(true);
 }
