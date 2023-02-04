@@ -20,7 +20,7 @@ public class SettingsManager : MonoBehaviour
     private void Awake()
     {
         if (Instance != null && Instance != this)
-            Destroy(this);
+            Destroy(gameObject);
         else
         {
             Instance = this;
@@ -61,6 +61,10 @@ public class SettingsManager : MonoBehaviour
     public void ToggleMusic()
     {
         MusicIsOn = !MusicIsOn;
+        if (MusicIsOn)
+            AudioManager.Instance.PlayMusic();
+        else
+            AudioManager.Instance.PauseMusic();
         MusicSettingChanged?.Invoke();
     }
 
