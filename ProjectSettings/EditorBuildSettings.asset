@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Clue Testing.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Start Menu.unity
+    guid: c42fccf5219813843a8ab0b62194a76d
+  - enabled: 1
+    path: Assets/Scenes/Nick's Scene.unity
+    guid: e5820ec7db215c44c8453c68de7b5ea6
   m_configObjects: {}
