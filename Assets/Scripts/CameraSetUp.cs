@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using System;
 
 public class CameraSetUp : MonoBehaviour
 {
@@ -9,7 +10,14 @@ public class CameraSetUp : MonoBehaviour
     void Start()
     {
         CinemachineVirtualCamera vCam = GetComponent<CinemachineVirtualCamera>();
-        vCam.Follow = FindObjectOfType<PlayerController>().gameObject.transform;
+        try
+        {
+            vCam.Follow = FindObjectOfType<PlayerController>().gameObject.transform;
+        }
+        catch(NullReferenceException ex)
+        {
+            // do nothing
+        }
     }
 
 }

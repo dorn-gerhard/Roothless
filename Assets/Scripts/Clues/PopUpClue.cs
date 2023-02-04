@@ -43,6 +43,12 @@ namespace ClueBoxes
             closeButton.transform.localPosition = temp;
         }
 
+        public void SetText(ClueText newClueText)
+        {
+            unformattedText = newClueText;
+            AdjustSize();
+        }
+
 
         private void OnTriggerEnter2D(Collider2D other)
         {
