@@ -113,6 +113,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -120,7 +132,7 @@ TextureImporter:
       name: Floor_and_Ring_tiles_0
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 64
         width: 32
         height: 32
@@ -141,7 +153,7 @@ TextureImporter:
       name: Floor_and_Ring_tiles_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 64
         width: 32
         height: 32
@@ -162,7 +174,7 @@ TextureImporter:
       name: Floor_and_Ring_tiles_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 64
         width: 32
         height: 32
@@ -183,7 +195,7 @@ TextureImporter:
       name: Floor_and_Ring_tiles_3
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 64
         width: 32
         height: 32
@@ -204,6 +216,48 @@ TextureImporter:
       name: Floor_and_Ring_tiles_4
       rect:
         serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965d15b51fd8a744590663f6e458f59e
+      internalID: -1471085350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_and_Ring_tiles_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bfbecd7f5828348b0347a78f27a27c
+      internalID: -454511480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_and_Ring_tiles_6
+      rect:
+        serializedVersion: 2
         x: 192
         y: 64
         width: 32
@@ -215,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d48c19d16ae9a946920a68347449632
-      internalID: -1471085350
+      spriteID: 350ef3cba951c20429a08ddbc76fa7f4
+      internalID: 1277624008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_5
+      name: Floor_and_Ring_tiles_7
       rect:
         serializedVersion: 2
         x: 224
@@ -236,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 521d236bf8cb70b40a14f64f6b0bbfdf
-      internalID: -454511480
+      spriteID: 2eb9e135e5dfa5c4087d3f98e5a26fd2
+      internalID: 977745986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_6
+      name: Floor_and_Ring_tiles_8
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3642894d740023f45b4c21cc9bdca3bf
-      internalID: 1277624008
+      spriteID: 3fe80accb97587d4ba440f02a27cfeeb
+      internalID: -2092473722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_7
+      name: Floor_and_Ring_tiles_9
       rect:
         serializedVersion: 2
         x: 32
@@ -278,14 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f7f49633956674197ea773a6e0dd86
-      internalID: 977745986
+      spriteID: 9aff471faa01a4141aef3fe99756c794
+      internalID: -852286134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_8
+      name: Floor_and_Ring_tiles_10
       rect:
         serializedVersion: 2
         x: 64
@@ -299,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 402571f42ac568a499b279ebd5fe6181
-      internalID: -2092473722
+      spriteID: 9b3a7d0086a422840b2bd3b735583568
+      internalID: -2140932749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_9
+      name: Floor_and_Ring_tiles_11
       rect:
         serializedVersion: 2
         x: 96
@@ -320,14 +374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d80d492d111d7f649940c1cb7064ad32
-      internalID: -852286134
+      spriteID: 3a32a31b9e3e88a46af32a1ba7e7998d
+      internalID: 1721916957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_10
+      name: Floor_and_Ring_tiles_12
       rect:
         serializedVersion: 2
         x: 128
@@ -341,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccf30bf0f61aa264f8de35f3bc68cbc0
-      internalID: -2140932749
+      spriteID: 85a2be61ab9c7a543a3dc13d4199c84c
+      internalID: -1137095535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_11
+      name: Floor_and_Ring_tiles_13
       rect:
         serializedVersion: 2
         x: 160
@@ -362,14 +416,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c29ef0b04c9afa5428201e50f4c2c4b3
-      internalID: 1721916957
+      spriteID: e4a6612869c251c4e9215eb207d4eb2c
+      internalID: -1565451836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_12
+      name: Floor_and_Ring_tiles_14
       rect:
         serializedVersion: 2
         x: 192
@@ -383,14 +437,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 183c38318a7de034ebe859002c41a90a
-      internalID: -1137095535
+      spriteID: c4c90e6785d169441bee39f94066569e
+      internalID: -834067510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_13
+      name: Floor_and_Ring_tiles_15
       rect:
         serializedVersion: 2
         x: 224
@@ -404,14 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2ddea89f1aa6b449bc0df151f702fa8
-      internalID: -1565451836
+      spriteID: 04b6c0b2a9328864db80d5c8ee3b53da
+      internalID: -616874342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_14
+      name: Floor_and_Ring_tiles_16
       rect:
         serializedVersion: 2
         x: 0
@@ -425,14 +479,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a2856a28daaa6b48982d36ce783a62e
-      internalID: -834067510
+      spriteID: 1af3f89b5825a704a8c6450d8e4f0343
+      internalID: 1521440584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_15
+      name: Floor_and_Ring_tiles_17
       rect:
         serializedVersion: 2
         x: 32
@@ -446,14 +500,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 617b29f81feb9244b9aafb9024343ef3
-      internalID: -616874342
+      spriteID: 36008b42368a5934db5bfa3cbb40849e
+      internalID: -1000685346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_16
+      name: Floor_and_Ring_tiles_18
       rect:
         serializedVersion: 2
         x: 64
@@ -467,14 +521,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7234d4ee90fc3d3498373760fad66388
-      internalID: 1521440584
+      spriteID: 56f07c9f59123f14cb7e92ae0a28e96b
+      internalID: 213191264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_17
+      name: Floor_and_Ring_tiles_19
       rect:
         serializedVersion: 2
         x: 96
@@ -488,14 +542,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 494a79d15c6a2da4d8d20079e95b2d95
-      internalID: -1000685346
+      spriteID: 0731f59fe973726408b526fba1758fbe
+      internalID: 131152836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_and_Ring_tiles_18
+      name: Floor_and_Ring_tiles_20
       rect:
         serializedVersion: 2
         x: 128
@@ -509,8 +563,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2565a50ec4c27a44a925239d44606e56
-      internalID: 213191264
+      spriteID: 9396b5a8bc8b10444b135ecb86ee44c6
+      internalID: 229610642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_and_Ring_tiles_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cd54b2ca06f68408649393bf01c8bd
+      internalID: 814631689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_and_Ring_tiles_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2864431b31572b24d9538b1dab00e48a
+      internalID: -1210489230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_and_Ring_tiles_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f34f44a7db87743b39238f777dfe6f
+      internalID: 1275026646
       vertices: []
       indices: 
       edges: []
@@ -527,12 +644,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Floor_and_Ring_tiles_12: -1137095535
+      Floor_and_Ring_tiles_20: 229610642
       Floor_and_Ring_tiles_2: 1893795841
       Floor_and_Ring_tiles_10: -2140932749
       Floor_and_Ring_tiles_16: 1521440584
       Floor_and_Ring_tiles_7: 977745986
+      Floor_and_Ring_tiles_21: 814631689
       Floor_and_Ring_tiles_18: 213191264
+      Floor_and_Ring_tiles_19: 131152836
       Floor_and_Ring_tiles_17: -1000685346
+      Floor_and_Ring_tiles_22: -1210489230
       Floor_and_Ring_tiles_3: 1425689780
       Floor_and_Ring_tiles_9: -852286134
       Floor_and_Ring_tiles_13: -1565451836
@@ -540,6 +661,7 @@ TextureImporter:
       Floor_and_Ring_tiles_0: -1877241152
       Floor_and_Ring_tiles_8: -2092473722
       Floor_and_Ring_tiles_11: 1721916957
+      Floor_and_Ring_tiles_23: 1275026646
       Floor_and_Ring_tiles_4: -1471085350
       Floor_and_Ring_tiles_6: 1277624008
       Floor_and_Ring_tiles_15: -616874342
