@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: Yakota1
   m_EditorClassIdentifier: 
-  clueText: "Watch out Gerd Dr\xFCcker is next to the Coffee Machine - he is really
-    rude!!! I was really lucky to beat him today."
+  clueText: Watch out Gerd Drucker is next to the Coffee Machine - he is really rude!!!
+    I was really lucky to beat him today.
