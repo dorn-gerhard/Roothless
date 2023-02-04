@@ -26,25 +26,14 @@ public class QuestMenu : MonoBehaviour
     [SerializeField]
     private Sprite _stopSprite;
 
-
-    [SerializeField]
-    GameObject NPCMenuEntryPrefab;
-    [SerializeField]
-    private float initialSpawnLocation;
-    [SerializeField]
-    private float spawnLocationIncrement;
     private int currentNPCEntryCount = 0;
-    [SerializeField]
-    private float offsetToRight=105;
+
 
     void Start()
     {
         
         onAcusePerson += SwitchAcusationButton;
         onStopAcusing += SwitchAcusationButton;
-
-        CreateNewNPCEntry(0);
-        CreateNewNPCEntry(1);
 
     }
 
@@ -68,16 +57,17 @@ public class QuestMenu : MonoBehaviour
         acuseButton.GetComponentInChildren<Image>().sprite = spriteUpdate;
     }
 
-    private void CreateNewNPCEntry(int NPCID)
+    public void CreateNewNPCEntry(NPCQuestMenuData menuData)
     {
-        QuestMenuNPCEntry newEntry = Instantiate(NPCMenuEntryPrefab, new Vector3(offsetToRight, initialSpawnLocation - (spawnLocationIncrement*currentNPCEntryCount)), Quaternion.identity, transform).GetComponent<QuestMenuNPCEntry>();
-        SetUpNewEntry(newEntry, NPCID);
+        transform.GetChild(currentNPCEntryCount + 1).gameObject.SetActive(true);
+        QuestMenuNPCEntry newEntry = transform.GetChild(currentNPCEntryCount +1).GetComponent<QuestMenuNPCEntry>();
+        SetUpNewEntry(newEntry, menuData);
         currentNPCEntryCount++;
 
     }
-    private void SetUpNewEntry(QuestMenuNPCEntry newEntry, int NPCID)
+    private void SetUpNewEntry(QuestMenuNPCEntry newEntry, NPCQuestMenuData menuData)
     {
-        NPCQuestMenuData menuData = FindObjectOfType<LogicManager>().allNPCData.GetAllNPCData()[NPCID];
+        
         newEntry.SetData(menuData);
         newEntry.SetQuestMenu(this);
 

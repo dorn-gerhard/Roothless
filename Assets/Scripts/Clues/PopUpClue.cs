@@ -16,6 +16,7 @@ namespace ClueBoxes
         [SerializeField] private Button closeButton;
         [SerializeField] private Collider2D triggerArea;
         [SerializeField] private GameObject clueIndicator;
+        [SerializeField] private int NPCID;
 
         private void Start()
         {
@@ -23,6 +24,10 @@ namespace ClueBoxes
             AdjustSize();
         }
 
+        private void TryToTrackVisit()
+        {
+            FindObjectOfType<LogicManager>().IncreaseVisitCount(NPCID);
+        }
         private void SetUpTrigger()
         {
             if (triggerArea == null)
@@ -57,6 +62,7 @@ namespace ClueBoxes
         {
             DisplayMessage();
             HideClueIndicator();
+            TryToTrackVisit();
         }
 
         private void OnTriggerExit2D(Collider2D other)

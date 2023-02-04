@@ -7,10 +7,8 @@ using ClueBoxes;
 public class NPCQuestMenuData : ScriptableObject
 {
     
-    public string NPCName;
+    public ClueText NPCName;
     public int NPCID;
     public Sprite NPCIcon;
-
-    public ClueText[] NPCDialogueLines;
 
 }
