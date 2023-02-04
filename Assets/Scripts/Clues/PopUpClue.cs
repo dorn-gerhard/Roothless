@@ -6,7 +6,10 @@ namespace ClueBoxes
 {
     public class PopUpClue : MonoBehaviour
     {
-        [SerializeField] ClueText unformattedText;
+        [SerializeField] ClueText[] unformattedText;
+        [SerializeField] int clueIndex;
+        [SerializeField] int minPeriodicClueIndex;
+        [SerializeField] int maxPeriodicClueIndex;
         [SerializeField] private GameObject UI_parent;
         [SerializeField] private SpriteRenderer background;
         [SerializeField] private TextMeshProUGUI textField;
@@ -30,7 +33,7 @@ namespace ClueBoxes
 
         private void AdjustSize()
         {
-            TextWithDimensions textFormat = ClueBoxFormatter.Adjust(unformattedText.GetText());
+            TextWithDimensions textFormat = ClueBoxFormatter.Adjust(unformattedText[clueIndex].GetText());
 
             background.size = new Vector2(textFormat.width / 100f, textFormat.height / 100f);
 
@@ -43,9 +46,9 @@ namespace ClueBoxes
             closeButton.transform.localPosition = temp;
         }
 
-        public void SetText(ClueText newClueText)
+        public void SetText(int newClueIndex)
         {
-            unformattedText = newClueText;
+            clueIndex = newClueIndex;
             AdjustSize();
         }
 
@@ -58,6 +61,11 @@ namespace ClueBoxes
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            clueIndex++;
+            if (clueIndex == maxPeriodicClueIndex)
+            {clueIndex = minPeriodicClueIndex;}
+            AdjustSize();
+
             HideMessage();
             ShowClueIndicator();
         }

@@ -5,6 +5,11 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class StartMenu : MonoBehaviour
 {
     [SerializeField] Canvas startMenu;
@@ -64,6 +69,7 @@ public class StartMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        
         StartCoroutine(QuitGameCR());
     }
 
@@ -91,8 +97,14 @@ public class StartMenu : MonoBehaviour
 
 
     private IEnumerator QuitGameCR()
-    {
-        yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
-        Application.Quit();
+    { 
+        #if UNITY_EDITOR
+            yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
+            EditorApplication.ExitPlaymode();
+        #else
+            yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
+            Application.Quit(); // original code to quit Unity player
+        #endif 
+        
     }
 }

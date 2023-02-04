@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: Gert_name
   m_EditorClassIdentifier: 
-  clueText: "Gert Dr\xFCcker"
+  clueText: Gert Drucker
