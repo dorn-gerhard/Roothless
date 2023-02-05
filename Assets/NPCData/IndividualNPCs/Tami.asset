@@ -15,3 +15,4 @@ MonoBehaviour:
   NPCName: {fileID: 11400000, guid: 845a5f9cc114aab4a988f7f806907766, type: 2}
   NPCID: 0
   NPCIcon: {fileID: -2133401450, guid: 8a6120c7f2807d24fb276a3e49113935, type: 3}
+  nameIsKnown: 1

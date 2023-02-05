@@ -7,9 +7,9 @@ namespace ClueBoxes
     public class PopUpClue : MonoBehaviour
     {
         [SerializeField] ClueText[] unformattedText;
-        [SerializeField] int clueIndex;
-        [SerializeField] int minPeriodicClueIndex;
-        [SerializeField] int maxPeriodicClueIndex;
+        public int clueIndex;
+        public int minPeriodicClueIndex;
+        public int maxPeriodicClueIndex;
         [SerializeField] private GameObject UI_parent;
         [SerializeField] private SpriteRenderer background;
         [SerializeField] private TextMeshProUGUI textField;
@@ -27,7 +27,8 @@ namespace ClueBoxes
 
         private void TryToTrackVisit()
         {
-            logicManager.IncreaseVisitCount(NPCID);
+           
+            logicManager.IncreaseVisitCount(NPCID, clueIndex);
             //logicManager.EnableCharacterName(NPCID);
         }
         private void SetUpTrigger()
@@ -66,6 +67,7 @@ namespace ClueBoxes
             {
                 other.GetComponent<PlayerController>().SetTalkingAnimation(true);
             }
+            AdjustSize();
             DisplayMessage();
             TryToTrackVisit();
         }

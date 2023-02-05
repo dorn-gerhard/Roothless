@@ -73,6 +73,10 @@ public class QuestMenu : MonoBehaviour
         newEntry.SetData(menuData);
         newEntry.SetQuestMenu(this);
         newEntry.DisplayCharacterIcon();
+        if (menuData.nameIsKnown)
+        {
+            newEntry.DisplayCharacterName();
+        }
 
     }
     public void EnableCharacterName(int childIdx) 
