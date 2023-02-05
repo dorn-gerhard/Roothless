@@ -59,12 +59,20 @@ namespace ClueBoxes
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (other.GetComponent<PlayerController>() != null)
+            {
+                other.GetComponent<PlayerController>().SetTalkingAnimation(true);
+            }
             DisplayMessage();
             TryToTrackVisit();
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
+            if (other.GetComponent<PlayerController>() != null)
+            {
+                other.GetComponent<PlayerController>().SetTalkingAnimation(false);
+            }
             clueIndex++;
             if (clueIndex == maxPeriodicClueIndex)
             {clueIndex = minPeriodicClueIndex;}

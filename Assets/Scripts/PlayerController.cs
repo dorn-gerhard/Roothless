@@ -93,4 +93,8 @@ public class PlayerController : MonoBehaviour
     public void UnlockMovement() {
         canMove = true;
     }
+
+    public void SetTalkingAnimation(bool value){
+        animator.SetBool("isTalking", value);
+    }
 }
