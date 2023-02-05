@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: Gert2
   m_EditorClassIdentifier: 
-  clueText: You brat, I said I don't like teeth, I hate them, I don't even mind that
-    I lost one of my own! Who needs teeth anyway? It's a waste of time to brush and
-    clean them. People who care for teeth are loosers.
+  clueText: You brat, I said I don't like teeth, I hate them. Teeth are a waste of
+    time - brushing and cleaning. People who care for teeth are loosers.

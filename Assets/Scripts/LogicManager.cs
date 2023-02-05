@@ -83,8 +83,10 @@ public class LogicManager : MonoBehaviour
         }
         if (playerVisitCount[COFFEE] == 1)
         {
-            // activate ring
+            // activate ring and help message
             npcGameobjects[RING].gameObject.SetActive(true);
+            npcGameobjects[TAMI].maxPeriodicClueIndex = 3;
+            npcGameobjects[TAMI].clueIndex = 2;
         }        
         // activate coffee drink
 
@@ -101,13 +103,14 @@ public class LogicManager : MonoBehaviour
 
         if (clueIndexVector[COFFEE] == 1)
         {
-        if (npcGameobjects[BABSI].maxPeriodicClueIndex < 4)
+            if (npcGameobjects[BABSI].maxPeriodicClueIndex < 4)
             {   
                 npcGameobjects[BABSI].minPeriodicClueIndex = 1;
                 npcGameobjects[BABSI].maxPeriodicClueIndex = 4;
                 npcGameobjects[BABSI].clueIndex = 3;
             }
         }
+         
 
         if (playerVisitCount[BABSI] == 2)
         {
