@@ -15,6 +15,8 @@ public class QuestMenuNPCEntry : MonoBehaviour
     private GameObject acuseButton;
     [SerializeField]
     private QuestMenu _questMenu;
+    [SerializeField]
+    private Image NPCIcon;
     public void SetQuestMenu(QuestMenu newQuestMenu)
     {
         _questMenu = newQuestMenu;
@@ -62,11 +64,22 @@ public class QuestMenuNPCEntry : MonoBehaviour
     {
         _characterID = newData.NPCID;
         _characterMenuIcon = newData.NPCIcon;
-        if(_characterMenuIcon != null)
-        {
-            GetComponentInChildren<Image>().sprite = _characterMenuIcon;
-        }
         _characterName = newData.NPCName.GetText();
+        
+    }
+
+    public void DisplayCharacterIcon()
+    {
+        if (_characterMenuIcon != null)
+        {
+            NPCIcon.sprite = _characterMenuIcon;
+        }
+    }
+
+    public void DisplayCharacterName()
+    {
         GetComponentInChildren<TextMeshProUGUI>().text = _characterName;
     }
+
+
 }

@@ -16,16 +16,19 @@ namespace ClueBoxes
         [SerializeField] private Button closeButton;
         [SerializeField] private Collider2D triggerArea;
         [SerializeField] private int NPCID;
+        private LogicManager logicManager;
 
         private void Start()
         {
             SetUpTrigger();
             AdjustSize();
+            logicManager = FindObjectOfType<LogicManager>();
         }
 
         private void TryToTrackVisit()
         {
-            FindObjectOfType<LogicManager>().IncreaseVisitCount(NPCID);
+            logicManager.IncreaseVisitCount(NPCID);
+            //logicManager.EnableCharacterName(NPCID);
         }
         private void SetUpTrigger()
         {
