@@ -121,6 +121,32 @@ public class LogicManager : MonoBehaviour
                 EnableCharacterName(TAMI);
             }
         }
+
+        if (playerVisitCount[YAKOTA] == 1)
+        {
+            if (!npcNamesClues[GERD].gameObject.activeInHierarchy)
+            {
+                npcNamesClues[GERD].gameObject.SetActive(true);
+            }
+            allNPCData.GetAllNPCData()[GERD].nameIsKnown = true;
+            if (playerVisitCount[GERD] > 0)
+            {
+                EnableCharacterName(GERD);
+            }
+        }
+
+        if (playerVisitCount[ALI] == 1)
+        {
+            if (!npcNamesClues[JEFF].gameObject.activeInHierarchy)
+            {
+                npcNamesClues[JEFF].gameObject.SetActive(true);
+            }
+            allNPCData.GetAllNPCData()[JEFF].nameIsKnown = true;
+            if (playerVisitCount[JEFF] > 0)
+            {
+                EnableCharacterName(JEFF);
+            }
+        }
          
 
     }
