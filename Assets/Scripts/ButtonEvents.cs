@@ -22,9 +22,8 @@ public class ButtonEvents : MonoBehaviour, IPointerEnterHandler, IPointerDownHan
     {
         if (SettingsManager.Instance.SoundIsOn)
         {
-            Debug.Log("Playing Highlight Sound");
             buttonSoundSource.clip = highlightSound;
-            buttonSoundSource.Play();
+            buttonSoundSource?.Play();
         }
     }
 
@@ -32,9 +31,8 @@ public class ButtonEvents : MonoBehaviour, IPointerEnterHandler, IPointerDownHan
     {
         if (SettingsManager.Instance.SoundIsOn)
         {
-            Debug.LogWarning("Playing CLICK Sound");
             buttonSoundSource.clip = clickSound;
-            buttonSoundSource.Play();
+            buttonSoundSource?.Play();
         }
     }
 }
