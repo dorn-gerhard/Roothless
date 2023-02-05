@@ -81,7 +81,9 @@ public class QuestMenu : MonoBehaviour
     }
     public void EnableCharacterName(int childIdx) 
     {
-        transform.GetChild(childIdx+1).GetComponent<QuestMenuNPCEntry>().DisplayCharacterName();
+        QuestMenuNPCEntry entry = transform.GetChild(childIdx + 1).GetComponent<QuestMenuNPCEntry>();
+        entry.DisplayCharacterName();
+        entry.nameIsKnown = true;
     }
 
 }
