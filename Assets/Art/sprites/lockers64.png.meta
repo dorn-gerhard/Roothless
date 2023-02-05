@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d1880805f501d634991ce02251517c4c
+guid: 386287692f6058e4ca4f5b193927a413
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,23 +101,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Long_bench_0
+      name: lockers64_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0915c99867f4afa4b924f09f0bef5261
-      internalID: 1783354049
+      spriteID: ae6944ec08740f44494ffaa5d8d0d99f
+      internalID: -1697985253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Long_bench_1
+      name: lockers64_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,77 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7289af9abd8772348a4a99befcdf8d3b
-      internalID: -256229593
+      spriteID: 5f0ce4b07b2ce9b4ba75d303232d3fba
+      internalID: 1088984403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Long_bench_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9f18b398aa1d404aae4e9b28f698174
-      internalID: 2001548212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Long_bench_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33090a172b164eb478a2e3d10532b736
-      internalID: -950566274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Long_bench_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 871bcfb0076ce9a4daae8eecc16ad919
-      internalID: 668606781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Long_bench_5
+      name: lockers64_2
       rect:
         serializedVersion: 2
         x: 0
@@ -236,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d478c671a41a92949a55c235cff8ea7e
-      internalID: -174266646
+      spriteID: 166507c257704244e81cd55e3cb04820
+      internalID: -708593411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Long_bench_6
+      name: lockers64_3
       rect:
         serializedVersion: 2
         x: 32
@@ -257,50 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46131b24861a5674eb192a28a6d1152c
-      internalID: 917669408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Long_bench_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1f9716eba45fd14f91b2ad7a1ce9186
-      internalID: -1595455384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Long_bench_8
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1291475c3f5e7934e922a74b2294a503
-      internalID: 1748430042
+      spriteID: 560b3fd3c1ba6564e9806ab5e9610bac
+      internalID: -1548333115
       vertices: []
       indices: 
       edges: []
@@ -316,15 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Long_bench_1: -256229593
-      Long_bench_0: 1783354049
-      Long_bench_8: 1748430042
-      Long_bench_2: 2001548212
-      Long_bench_4: 668606781
-      Long_bench_7: -1595455384
-      Long_bench_3: -950566274
-      Long_bench_5: -174266646
-      Long_bench_6: 917669408
+      lockers64_0: -1697985253
+      lockers64_2: -708593411
+      lockers64_3: -1548333115
+      lockers64_1: 1088984403
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
