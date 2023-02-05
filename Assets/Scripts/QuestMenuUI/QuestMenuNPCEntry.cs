@@ -57,6 +57,7 @@ public class QuestMenuNPCEntry : MonoBehaviour
 
     public void Acuse()
     {
+        Debug.Log("subbmitted accusation for character " + _characterName + " with character ID: " + _characterID); 
         FindObjectOfType<LogicManager>().SubmitAcusation(_characterID);
     }
 

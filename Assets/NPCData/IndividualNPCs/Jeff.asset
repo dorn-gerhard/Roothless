@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Jeff
   m_EditorClassIdentifier: 
   NPCName: {fileID: 11400000, guid: 55115fe67f239ff49a7ab67efd42348b, type: 2}
-  NPCID: 0
+  NPCID: 3
   NPCIcon: {fileID: 2106222010, guid: 8a6120c7f2807d24fb276a3e49113935, type: 3}
+  nameIsKnown: 1

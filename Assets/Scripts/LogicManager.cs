@@ -6,7 +6,7 @@ public class LogicManager : MonoBehaviour
 {
 
     [SerializeField]
-    private int _correctChoiceNPCID = 1;
+    private int _correctChoiceNPCID;
     [SerializeField]
     public AllNPCData allNPCData;
 
@@ -111,44 +111,45 @@ public class LogicManager : MonoBehaviour
 
         if (playerVisitCount[BABSI] == 2)
         {
-            if (!npcNamesClues[TAMI].gameObject.activeInHierarchy)
-            {
-                npcNamesClues[TAMI].gameObject.SetActive(true);
-            }
-            allNPCData.GetAllNPCData()[TAMI].nameIsKnown = true;
-            if (playerVisitCount[TAMI] > 0)
-            {
-                EnableCharacterName(TAMI);
-            }
+            ActivateName(TAMI);
         }
 
         if (playerVisitCount[YAKOTA] == 1)
         {
-            if (!npcNamesClues[GERD].gameObject.activeInHierarchy)
-            {
-                npcNamesClues[GERD].gameObject.SetActive(true);
-            }
-            allNPCData.GetAllNPCData()[GERD].nameIsKnown = true;
-            if (playerVisitCount[GERD] > 0)
-            {
-                EnableCharacterName(GERD);
-            }
+            ActivateName(GERD);
         }
 
         if (playerVisitCount[ALI] == 1)
         {
-            if (!npcNamesClues[JEFF].gameObject.activeInHierarchy)
-            {
-                npcNamesClues[JEFF].gameObject.SetActive(true);
-            }
-            allNPCData.GetAllNPCData()[JEFF].nameIsKnown = true;
-            if (playerVisitCount[JEFF] > 0)
-            {
-                EnableCharacterName(JEFF);
-            }
+            ActivateName(JEFF);
+            ActivateName(ALI);
+
         }
+        // activate Babsis name
+        if (clueIndexVector[JEFF] == 2)
+        {
+            ActivateName(BABSI);
+        }
+        if (playerVisitCount[YAKOTA] == 1)
+        {
+            ActivateName(YAKOTA);
+        }
+
          
 
+    }
+
+    void ActivateName(int npcID)
+    {
+        if (!npcNamesClues[npcID].gameObject.activeInHierarchy)
+            {
+                npcNamesClues[npcID].gameObject.SetActive(true);
+            }
+            allNPCData.GetAllNPCData()[npcID].nameIsKnown = true;
+            if (playerVisitCount[npcID] > 0)
+            {
+                EnableCharacterName(npcID);
+            }
     }
 
     public void EnableCharacterName(int NPCID)
@@ -199,6 +200,7 @@ public class LogicManager : MonoBehaviour
 
     public void SubmitAcusation(int NPCID)
     {
+        
         if(NPCID == _correctChoiceNPCID)
         {
             TriggerPositiveSceneConclusion();
@@ -210,10 +212,13 @@ public class LogicManager : MonoBehaviour
 
     private void TriggerPositiveSceneConclusion()
     {
+        FindObjectOfType<WinLoseScreen>().OpenWinScreen();
+        
         Debug.Log("Win");
     }
     private void TriggerNegativeSceneConclusion()
     {
+        FindObjectOfType<WinLoseScreen>().OpenLoseScreen();
         Debug.Log("Lose");
     }
 }

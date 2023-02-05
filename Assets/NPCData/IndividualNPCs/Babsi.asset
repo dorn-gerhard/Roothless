@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Babsi
   m_EditorClassIdentifier: 
   NPCName: {fileID: 11400000, guid: 116fa650c893124478edd4a75c3b6cfa, type: 2}
-  NPCID: 0
+  NPCID: 1
   NPCIcon: {fileID: -434575577, guid: 8a6120c7f2807d24fb276a3e49113935, type: 3}
+  nameIsKnown: 0

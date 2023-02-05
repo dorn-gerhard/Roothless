@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Gerd
   m_EditorClassIdentifier: 
   NPCName: {fileID: 11400000, guid: a7b4172240c09bd4b95c70898c001e24, type: 2}
-  NPCID: 0
+  NPCID: 2
   NPCIcon: {fileID: -2143154519, guid: 8a6120c7f2807d24fb276a3e49113935, type: 3}
+  nameIsKnown: 1
