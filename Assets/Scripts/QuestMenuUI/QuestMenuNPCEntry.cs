@@ -11,6 +11,7 @@ public class QuestMenuNPCEntry : MonoBehaviour
     private int _characterID;
     private string _characterName;
     private Sprite _characterMenuIcon;
+    public bool nameIsKnown=false;
     [SerializeField]
     private GameObject acuseButton;
     [SerializeField]
@@ -33,6 +34,7 @@ public class QuestMenuNPCEntry : MonoBehaviour
 
     public void EnableAccusation()
     {
+        if(!nameIsKnown) { return; }
         acuseButton.SetActive(true);
     }
 
@@ -66,6 +68,7 @@ public class QuestMenuNPCEntry : MonoBehaviour
         _characterID = newData.NPCID;
         _characterMenuIcon = newData.NPCIcon;
         _characterName = newData.NPCName.GetText();
+        nameIsKnown = newData.nameIsKnown;
         
     }
 
