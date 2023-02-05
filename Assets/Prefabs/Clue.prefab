@@ -177,6 +177,7 @@ MonoBehaviour:
   textField: {fileID: 4403461221132762700}
   closeButton: {fileID: 4403461220922329940}
   triggerArea: {fileID: 1837079828301351273}
+  NPCID: 0
 --- !u!50 &1310758193434906582
 Rigidbody2D:
   serializedVersion: 4
@@ -662,7 +663,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 27
   m_TargetDisplay: 0
 --- !u!114 &4403461221346021447
 MonoBehaviour:

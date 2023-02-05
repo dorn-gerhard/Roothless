@@ -295,7 +295,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 16
   m_TargetDisplay: 0
 --- !u!114 &8377679859283814888
 MonoBehaviour:
@@ -478,6 +478,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8377679859226946403}
     m_Modifications:
+    - target: {fileID: 6344325606688755793, guid: be98da78aa4390f48875f477a5884675, type: 3}
+      propertyPath: m_lineSpacing
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 6344325607519211742, guid: be98da78aa4390f48875f477a5884675, type: 3}
       propertyPath: m_Name
       value: QuestMenuNPCEntry (3)
@@ -584,6 +588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8377679859226946403}
     m_Modifications:
+    - target: {fileID: 6344325606688755793, guid: be98da78aa4390f48875f477a5884675, type: 3}
+      propertyPath: m_lineSpacing
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 6344325607519211742, guid: be98da78aa4390f48875f477a5884675, type: 3}
       propertyPath: m_Name
       value: QuestMenuNPCEntry (1)
@@ -690,6 +698,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8377679859226946403}
     m_Modifications:
+    - target: {fileID: 6344325606688755793, guid: be98da78aa4390f48875f477a5884675, type: 3}
+      propertyPath: m_lineSpacing
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 6344325607519211742, guid: be98da78aa4390f48875f477a5884675, type: 3}
       propertyPath: m_Name
       value: QuestMenuNPCEntry (2)
@@ -796,6 +808,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8377679859226946403}
     m_Modifications:
+    - target: {fileID: 6344325606688755793, guid: be98da78aa4390f48875f477a5884675, type: 3}
+      propertyPath: m_lineSpacing
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 6344325607519211742, guid: be98da78aa4390f48875f477a5884675, type: 3}
       propertyPath: m_Name
       value: QuestMenuNPCEntry
@@ -902,6 +918,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8377679859226946403}
     m_Modifications:
+    - target: {fileID: 6344325606688755793, guid: be98da78aa4390f48875f477a5884675, type: 3}
+      propertyPath: m_lineSpacing
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 6344325607519211742, guid: be98da78aa4390f48875f477a5884675, type: 3}
       propertyPath: m_Name
       value: QuestMenuNPCEntry (5)
@@ -1008,6 +1028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8377679859226946403}
     m_Modifications:
+    - target: {fileID: 6344325606688755793, guid: be98da78aa4390f48875f477a5884675, type: 3}
+      propertyPath: m_lineSpacing
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 6344325607519211742, guid: be98da78aa4390f48875f477a5884675, type: 3}
       propertyPath: m_Name
       value: QuestMenuNPCEntry (4)

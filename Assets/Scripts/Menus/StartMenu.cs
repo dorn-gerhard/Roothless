@@ -106,7 +106,7 @@ public class StartMenu : MonoBehaviour
         // open scene selection
         startMenu.enabled = false;
         levelSelectMenu.enabled = true;
-        SceneManager.LoadScene("Nick's Scene");
+        SceneManager.LoadScene("BoxringChris");
     }
 
 
