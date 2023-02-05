@@ -66,7 +66,7 @@ public class QuestMenuNPCEntry : MonoBehaviour
         {
             GetComponentInChildren<Image>().sprite = _characterMenuIcon;
         }
-        _characterName = newData.NPCName;
+        _characterName = newData.NPCName.GetText();
         GetComponentInChildren<TextMeshProUGUI>().text = _characterName;
     }
 }

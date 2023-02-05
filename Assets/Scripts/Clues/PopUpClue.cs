@@ -15,7 +15,7 @@ namespace ClueBoxes
         [SerializeField] private TextMeshProUGUI textField;
         [SerializeField] private Button closeButton;
         [SerializeField] private Collider2D triggerArea;
-        [SerializeField] private GameObject clueIndicator;
+        [SerializeField] private int NPCID;
 
         private void Start()
         {
@@ -23,6 +23,10 @@ namespace ClueBoxes
             AdjustSize();
         }
 
+        private void TryToTrackVisit()
+        {
+            FindObjectOfType<LogicManager>().IncreaseVisitCount(NPCID);
+        }
         private void SetUpTrigger()
         {
             if (triggerArea == null)
@@ -56,7 +60,7 @@ namespace ClueBoxes
         private void OnTriggerEnter2D(Collider2D other)
         {
             DisplayMessage();
-            HideClueIndicator();
+            TryToTrackVisit();
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -67,7 +71,6 @@ namespace ClueBoxes
             AdjustSize();
 
             HideMessage();
-            ShowClueIndicator();
         }
 
         private void HideMessage()
@@ -83,7 +86,5 @@ namespace ClueBoxes
         // For "close" button
         public void Close() => HideMessage();
 
-        private void HideClueIndicator() => clueIndicator.gameObject.SetActive(false);
-        private void ShowClueIndicator() => clueIndicator.gameObject.SetActive(true);
     }
 }
