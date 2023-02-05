@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: Ali2
   m_EditorClassIdentifier: 
-  clueText: The tooth I lost was a canine.
+  clueText: Now that I think about it... the tooth I lost was a canine.

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: CoffeeMachine2
   m_EditorClassIdentifier: 
-  clueText: You got a drink
+  clueText: You got a drink!

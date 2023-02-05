@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: Ali1
   m_EditorClassIdentifier: 
-  clueText: 'I don''t know who lost you, I don''t remember anythin'', lucky I know
-    my name: Ali Hamid. Well  got knocked out today by that bull of a knocker!'
+  clueText: 'I don''t know who lost you, I don''t remember anythin''. It''s lucky
+    that I can still remember my name: Ali Hamid!  Wait, that''s right! I got knocked
+    out today by that bull of a knocker!'

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9394fd377010a419d39780c1f582b7, type: 3}
   m_Name: Babsi4
   m_EditorClassIdentifier: 
-  clueText: Thank you for the drink. You are right, I miss a tooth, but it's not
-    you darling ;) I lost it years ago ;)
+  clueText: Thank you for the drink. You are right, I miss a tooth. But it's not
+    you darling ;)! I lost it years ago ;).
