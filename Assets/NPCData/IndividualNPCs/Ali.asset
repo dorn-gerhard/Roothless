@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCName: {fileID: 11400000, guid: 4cf206e212729b34aad51830deb53311, type: 2}
   NPCID: 0
-  NPCIcon: {fileID: 0}
+  NPCIcon: {fileID: 776537745, guid: 8a6120c7f2807d24fb276a3e49113935, type: 3}

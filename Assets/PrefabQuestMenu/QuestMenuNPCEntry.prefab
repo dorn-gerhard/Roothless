@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acuseButton: {fileID: 6344325607964491718}
   _questMenu: {fileID: 0}
+  NPCIcon: {fileID: 6344325607955107053}
 --- !u!1 &6344325607955107051
 GameObject:
   m_ObjectHideFlags: 0
