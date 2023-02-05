@@ -59,7 +59,7 @@ public class TransitionsManager : MonoBehaviour
     private IEnumerator SplashCoroutine()
     {
         yield return PlayIntro();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         yield return PlayOutro();
         SceneManager.LoadScene("Start Menu");
     }
