@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI musicText;
 
 
-
+    private bool mayOpenPauseMenu = false;
     private bool pauseMenuIsActive = false;
 
     private void Awake()
@@ -28,6 +28,14 @@ public class PauseMenu : MonoBehaviour
 
         musicButton.onClick.RemoveAllListeners();
         musicButton.onClick.AddListener(() => { SettingsManager.Instance.ToggleMusic(); });
+    }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(1f);
+        UpdateSoundText();
+        UpdateMusicText();
+        mayOpenPauseMenu = true;
     }
 
     private void OnEnable()
@@ -62,7 +70,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (pauseMenuIsActive)
             ClosePauseMenu();
-        else
+        else if(mayOpenPauseMenu)
             OpenPauseMenu();
     }
 
@@ -88,11 +96,13 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToStartMenu()
     {
+        mayOpenPauseMenu = false;
         StartCoroutine(GoToStartMenuCR());
     }
 
     private IEnumerator GoToStartMenuCR()
     {
+        mayOpenPauseMenu = false;
         ClosePauseMenu();
         yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
         SceneManager.LoadScene("Start Menu");
@@ -112,6 +122,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        mayOpenPauseMenu = false;
         StartCoroutine(QuitGameCR());
     }
 

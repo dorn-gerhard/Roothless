@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -56,6 +57,7 @@ public class SettingsManager : MonoBehaviour
     {
         SoundIsOn = !SoundIsOn;
         SoundSettingChanged?.Invoke();
+        ResetButtonColor();
     }
 
     public void ToggleMusic()
@@ -66,6 +68,14 @@ public class SettingsManager : MonoBehaviour
         else
             AudioManager.Instance.PauseMusic();
         MusicSettingChanged?.Invoke();
+        ResetButtonColor();
+    }
+
+
+
+    private void ResetButtonColor()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
 }

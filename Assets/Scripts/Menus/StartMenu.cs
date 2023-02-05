@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
+using UnityEngine.EventSystems;
 
 
 #if UNITY_EDITOR
@@ -32,6 +34,9 @@ public class StartMenu : MonoBehaviour
 
         musicButton.onClick.RemoveAllListeners();
         musicButton.onClick.AddListener(() => { SettingsManager.Instance.ToggleMusic(); });
+
+        UpdateMusicText();
+        UpdateSoundText();
     }
 
     private void OnEnable()
@@ -59,22 +64,30 @@ public class StartMenu : MonoBehaviour
     public void StartGame() 
     {
         StartCoroutine(StartGameCR());
+        ResetButtonColor();
+    }
+
+    private void ResetButtonColor()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void GoToSettings() 
     {
         startMenu.enabled = false;
         settingsMenu.enabled = true;
+        ResetButtonColor();
     }
 
     public void QuitGame()
     {
-        
+        ResetButtonColor();
         StartCoroutine(QuitGameCR());
     }
 
     public void CloseSettingsMenu() 
     {
+        ResetButtonColor();
         startMenu.enabled = true;
         settingsMenu.enabled = false;
 
@@ -82,6 +95,7 @@ public class StartMenu : MonoBehaviour
 
     public void CloseLevelSelector() 
     {
+        ResetButtonColor();
         startMenu.enabled = true;
         levelSelectMenu.enabled = false;
     }
@@ -97,9 +111,10 @@ public class StartMenu : MonoBehaviour
 
 
     private IEnumerator QuitGameCR()
-    { 
+    {
+        ResetButtonColor();
         #if UNITY_EDITOR
-            yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
+        yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
             EditorApplication.ExitPlaymode();
         #else
             yield return StartCoroutine(TransitionsManager.Instance.PlayOutro());
