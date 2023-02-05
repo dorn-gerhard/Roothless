@@ -24,7 +24,7 @@ public class WinLoseScreen : MonoBehaviour
     private void CloseWinLoseScreen()
     {
         loseCanvas.enabled = false;
-        loseCanvas.enabled = false;
+        winCanvas.enabled = false;
         backgroundCanvas.enabled = false;
     }
 
