@@ -25,13 +25,13 @@ public class QuestMenu : MonoBehaviour
     private string _stopAcuseText;
     [SerializeField]
     private Sprite _stopSprite;
+    [SerializeField] AudioSource audioSource;
 
     private int currentNPCEntryCount = 0;
 
 
     void Start()
     {
-        
         onAcusePerson += SwitchAcusationButton;
         onStopAcusing += SwitchAcusationButton;
 
@@ -46,6 +46,8 @@ public class QuestMenu : MonoBehaviour
         } else
         {
             onAcusePerson?.Invoke();
+            if(SettingsManager.Instance.SoundIsOn)
+                audioSource.Play();
             _isAcusing = true;
         }
     }
