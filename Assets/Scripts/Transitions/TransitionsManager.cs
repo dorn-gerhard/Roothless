@@ -18,7 +18,6 @@ public class TransitionsManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
-            transitionsCanvas.worldCamera = Camera.main;
             SetProgress(1);
             StartCoroutine(SplashCoroutine());
         }
